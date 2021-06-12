@@ -1,0 +1,303 @@
+<html>
+    <head>
+        <title>
+            This is the title
+        </title>
+    <style>
+        #_progress {
+            --scroll: 0%;
+            background: linear-gradient(to right, rgb(0, 143, 105) var(--scroll), transparent 0);
+            position:fixed;
+            width: 100%;
+            height: 5px;
+            top: 0px;
+            z-index: 100;
+        }
+
+        #stepProgressBar {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            width: 300px;
+            margin: 0 auto; 
+            margin-bottom: 40px;            
+        }
+
+        .step {
+            text-align: center;
+        }
+
+        .step-text {
+            margin-bottom: 10px;
+            color: #28a745;
+        }
+
+        .bullet {
+            border: 1px solid #28a748;
+            height: 20px;
+            width: 20px;
+            border-radius: 100%;
+            color:#28a745;
+            display: inline-block;
+            position: relative;
+            transition: background-color 500ms;
+            line-height: 20px;
+            z-index: 100;
+        }
+        .bullet.completed, .bullet.final {
+            color: white;
+            background-color: #28a745;
+        }
+        .bullet.completed::after {
+            border: 2px solid #28a745;
+            content: '';
+            position: absolute;
+            right: -73px;
+            bottom: 10px;
+            height: 1px;
+            width: 70px;
+            background-color: #28a745;
+        }
+        .hidden {
+            display: none;
+        }
+
+        button {
+            padding: 5px 10px;
+            border: 1px solid black;
+            transition: 250ms background-color;
+        }
+        button:hover {
+            cursor: pointer;
+            background-color: black;
+            color: white;
+        }
+        button:disabled:hover {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        .text-center {
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 20px;
+            padding: 40ppx;     
+        }
+    </style>
+    </head>
+    <body>
+        <div id="_progress"></div>
+            <br>
+            kdjkfjdl
+           
+           
+            <br>
+            <div class="container">
+                <div id="stepProgressBar">
+                    
+                </div>
+                <div id="main">
+                    <div id="content" class="text-center">
+
+                    </div>
+                    <button id="previous"> Previous </button>
+                    <button id="next"> Next </button>
+                    <button id="submit"> Submit </button>
+                </div>
+            </div>
+
+            <div class="_cProgress canvas-wrapper">
+                <canvas id="canvas" width="300" height="300"></canvas>
+                <span id="procent"></span>
+            </div>
+        <script>
+            let pages = [
+                {
+                inputs: [
+                    {type:'text', placeholder:'Fullname'},
+                    {type:'text', placeholder:'password'}],
+                hero: 'Big',
+                subhero: 'The biggest'},
+                {
+                inputs: [
+                    {type:'text', placeholder:'Fullname'}],
+                hero: 'Yes',
+                subhero: 'It is working'},
+                {
+                inputs: [
+                    {type:'text', placeholder:'Fullname'}],
+                hero: 'Pox',
+                subhero: 'Ye that is great'},
+                {
+                inputs: [
+                    {type:'text', placeholder:'Fullname'},
+                    {type:'text', placeholder:'password'}],
+                hero: 'Pox',
+                subhero: 'it is very interesting'}
+            ]
+
+            document.addEventListener("scroll",  function(event) {
+                let scrollTop = document.documentElement["scrollTop"] || document.body["scrollTop"];
+
+                let scrollBottom = (document.documentElement["scrollHeight"] || document.body["scrollHeight"]) - document.body.clientHeight;
+                console.log(scrollBottom)
+                let scrollPercent = (scrollTop / scrollBottom ) * 100 + "%";
+                console.log(scrollPercent)
+
+                document.getElementById("_progress").style.setProperty("--scroll", scrollPercent);
+            }, {passive: true})
+
+
+            const next = document.getElementById('next');
+            const previous = document.getElementById('previous');
+            const submit = document.getElementById('submit');
+            const content = document.getElementById('content');
+
+            const MAX_STEPS = 4
+            let currentStep = 0;
+
+            const render = (page) => {
+                console.log(page);
+                return `<div>
+                        <h1>${page.hero}</h1>
+                        <p>${page.subhero}</p>
+                        <div class="form">
+                            ${ makeInputs(page.inputs)}
+                        </div>
+                    </div>`;
+            }
+
+            const makeBullets = (pages) => {
+                let stepProgressBar = document.getElementById('stepProgressBar');
+                let steps = pages.map( (page, index) => {
+                    return `<div class="step">
+                        <p class="step-text"></p>
+                        <div class="bullet">${index + 1}</div>
+                    </div>`;
+                })
+
+                return steps.join(" ");
+            }
+            const makeInputs = (inputs) => {
+                let formInput = inputs.map( ( input ) => {
+                   return `<input 
+                        type="${input.type}" 
+                        placeholder="${input.placeholder}"
+                        class="form__input"
+                    />`;
+                });
+                return formInput.join(" ");
+            }
+            render(pages[currentStep]);
+            stepProgressBar.innerHTML = makeBullets(pages);
+            const bullets = [...document.querySelectorAll('.bullet')];
+
+            next.addEventListener('click', ()=> {
+                bullets[currentStep].classList.add('completed');
+                content.innerHTML = render(pages[currentStep]);
+                currentStep += 1;
+                previous.disabled = false;
+                
+                if(currentStep === MAX_STEPS) {
+                    next.disabled = true;
+                    submit.disable = false;
+                    bullets[currentStep].classList.add('final');
+                }
+            });
+
+            previous.addEventListener('click', ()=> {
+                bullets[currentStep - 1].classList.remove('completed');
+                currentStep -= 1;
+                next.disabled = false;
+                submit.disabled = true;
+                if(currentStep === MAX_STEPS) {
+                    previous.disabled = true;
+                }
+                content.innerHTML = render(pages[currentStep]);;
+            });
+
+            submit.addEventListener('click', () => {
+                location.reload();
+            })
+        </script>
+    </body>
+</html>
+
+
+
+<section id="benefits-section" class="benefits-section theme-bg-light-gradient">
+    <div class="container py-5">
+        <h2 class="section-heading text-center mb-3">What you will learn</h2>
+        <div class="section-intro single-col-max mx-auto text-center mb-5"> This course is specifically designed to help you overcome the struggle to understand and build projects with JavaScript. So, you will have access to practical information and ideas that will make you a great software developer. By the end of this course, you you will understand:</div>
+        <div class="row text-center">
+            <div class="item col-12 col-md-6 col-lg-4">
+                <div class="item-inner p-3 p-lg-4">
+                    <div class="item-header mb-3">
+                        <div class="item-icon"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="item-heading"> Javascript fundamentals.</h3>
+                    </div><!--//item-heading-->
+                    <div class="item-desc">
+                        You will learn and understand fundamentals of Javascript such as control flow, promises, objects, functions and many more like the palm of your hands. 
+                    </div><!--//item-desc-->
+                </div><!--//item-inner-->
+            </div><!--//item-->
+            <div class="item col-12 col-md-6 col-lg-4">
+                <div class="item-inner p-3 p-lg-4">
+                    <div class="item-header mb-3">
+                        <div class="item-icon"><i class="fab fa-js-square"></i></div>
+                        <h3 class="item-heading">Fundamental principles of making projects</h3>
+                    </div><!--//item-heading-->
+                    <div class="item-desc">
+                         The course will show you some little-known principles that will help you understand how to build projects without the usual trial and error strategies.
+                    </div><!--//item-desc-->
+                </div><!--//item-inner-->
+            </div><!--//item-->
+            <div class="item col-12 col-md-6 col-lg-4">
+                <div class="item-inner p-3 p-lg-4">
+                    <div class="item-header mb-3">
+                        <div class="item-icon"><i class="fab fa-rocketchat"></i></div>
+                        <h3 class="item-heading"> Build Projects </h3>
+                    </div><!--//item-heading-->
+                    <div class="item-desc">
+                        You will build projects practically with fundamental principles such as 5Ts of programming, common-ignorance and components extraction and you will be able to build projects on your own and from the scratch.
+                    </div><!--//item-desc-->
+                </div><!--//item-inner-->
+            </div><!--//item-->
+            <div class="item col-12 col-md-6 col-lg-4">
+                <div class="item-inner p-3 p-lg-4">
+                    <div class="item-header mb-3">
+                        <div class="item-icon"><i class="fab fa-angular"></i></div>
+                        <h3 class="item-heading">Preparation for Frameworks and Libraries</h3>
+                    </div><!--//item-heading-->
+                    <div class="item-desc">
+                        As this course makes everything in Javascript understandable, you will be properly prepared to learn any frameworks or libraries such React, Vue or Angular.
+                    </div><!--//item-desc-->
+                </div><!--//item-inner-->
+            </div><!--//item-->
+            <div class="item col-12 col-md-6 col-lg-4">
+                <div class="item-inner p-3 p-lg-4">
+                    <div class="item-header mb-3">
+                        <div class="item-icon"><i class="fas fa-code-branch"></i></div>
+                        <h3 class="item-heading">Expert secrets</h3>
+                    </div><!--//item-heading-->
+                    <div class="item-desc">
+                        Software developers always develop some abilities that help them understand programming, solve problems and build projects better. You will get those secrets in this course. 
+                    </div><!--//item-desc-->
+                </div><!--//item-inner-->
+            </div><!--//item-->
+            <div class="item col-12 col-md-6 col-lg-4">
+                <div class="item-inner p-3 p-lg-4">
+                    <div class="item-header mb-3">
+                        <div class="item-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                        <h3 class="item-heading">How to monetize your skills</h3>
+                    </div><!--//item-heading-->
+                    <div class="item-desc">
+                        Whether you want to get a job or freelance to start making money with your skills, this course shows you how to get started and avoid some of the mistakes that prevents many developers from earning with their skills. 
+                    </div><!--//item-desc-->
+                </div><!--//item-inner-->
+            </div><!--//item-->
+        </div><!--//row-->
+    </div><!--//container-->
+</section><!--//benefits-section-->
