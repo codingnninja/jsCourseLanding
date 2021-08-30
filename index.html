@@ -29,27 +29,28 @@
 	function gtag(){dataLayer.push(arguments);}
 	gtag('js', new Date());
 
-	gtag('config', 'AW-479700803');
+	// gtag('config', 'AW-479700803');
 	gtag('config', 'G-3J9XBE6JJN');
 	</script>
 
-	<!-- Event snippet for Purchase conversion page
+<!-- Event snippet for Purchase javaScript for Novice conversion page
 In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
-	<script>
-		function gtag_report_conversion(url) {
-		var callback = function () {
-			if (typeof(url) != 'undefined') {
-			window.location = url;
-			}
-		};
-		gtag('event', 'conversion', {
-			'send_to': 'AW-479700803/6Y7UCPzV0u8CEMPO3uQB',
-			'transaction_id': '',
-			'event_callback': callback
-		});
-		return false;
-		}
-	</script>
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-479700803/jUuOCJ2DsfACEMPO3uQB',
+      'transaction_id': '',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
 	
 	<!-- Facebook Pixel Code -->
 	<script>
