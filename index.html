@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>JavaScript for a total beginner: From struggling to genius</title>
+    <title>JavaScript for a total novice: From struggling to genius</title>
     
     <!-- Meta -->
     <meta charset="utf-8">
@@ -13,8 +13,63 @@
     
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
+	<style>
+
+
+.pricing .card {
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.2s;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.pricing hr {
+  margin: 1.5rem 0;
+}
+
+.pricing .card-title {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+}
+
+.pricing .card-price {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.pricing .card-price .period {
+  font-size: 0.8rem;
+}
+
+.pricing ul li {
+  margin-bottom: 1rem;
+}
+
+.pricing .text-muted {
+  opacity: 0.7;
+}
+
+
+/* Hover Effects on Card */
+
+@media (min-width: 992px) {
+  .pricing .card:hover {
+    margin-top: -.25rem;
+    margin-bottom: .25rem;
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.3);
+  }
+
+  .pricing .card:hover .btn {
+    opacity: 1;
+  }
+}
+.appeared_on{width:200px}
+	</style>
     
     <!-- FontAwesome JS-->
+	
     <script defer src="assets/fontawesome/js/all.min.js"></script>
 
     <!-- Theme CSS -->  
@@ -22,24 +77,12 @@
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jotted@latest/jotted.min.css">
 	<link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" />
 <script src="https://cdn.jsdelivr.net/npm/jotted@latest/jotted.min.js"></script>
-	<!-- Global site tag (gtag.js) - Google Ads: 479700803 -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=AW-479700803"></script>
-	<script>
-	window.dataLayer = window.dataLayer || [];
-	function gtag(){dataLayer.push(arguments);}
-	gtag('js', new Date());
-
-	// gtag('config', 'AW-479700803');
-	gtag('config', 'G-3J9XBE6JJN');
-	</script>
 
 <!-- Event snippet for Begin checkout conversion page -->
-<script>
+<!-- <script>
 	gtag('event', 'conversion', {'send_to': 'AW-479700803/gbagCN-o5PICEMPO3uQB'});
-  </script>
+  </script> -->
   
-
-	
 	<!-- Facebook Pixel Code -->
 	<script>
 		!function(f,b,e,v,n,t,s)
@@ -77,7 +120,7 @@
 			    <div class="col-12 col-md-7 pt-5 mb-5 align-self-center">
 				    <div class="promo pr-md-3 pr-lg-5">
 					    <h1 class="headline mb-3">
-							JavaScript for a total beginner: From struggling to genius 
+							JavaScript for a total novice: From struggling to genius 
 					    </h1><!--//headline-->
 					    <div class="subheadline mb-4"><br>
 						    This "course + mentoring" program uses new teaching techniques to help you understand and build projects with JavaScript with practical examples 
@@ -107,7 +150,6 @@
 									        <img class="source-profile mr-md-3" src="assets/images/wahab.jpg" alt="image" >
 									        <div class="source-info media-body text-center text-md-left">
 										        <div class="source-name">Abd-Wahab Adekola</div>
-										        <div class="soure-title">Founder, www.MailHouse.com.ng</div>
 										    </div>
 								        </div><!--//source-->
 								    </div><!--//carousel-item-->
@@ -119,7 +161,6 @@
 									        <img class="source-profile mr-md-3" src="assets/images/abdul.jpg" alt="image" >
 									        <div class="source-info media-body text-center text-md-left">
 										        <div class="source-name">Abdullahi Oladejo</div>
-										        <div class="soure-title">Software Development Teacher</div>
 										    </div>
 								        </div><!--//source-->
 								    </div><!--//carousel-item-->
@@ -131,7 +172,7 @@
 									        <img class="source-profile mr-md-3" src="assets/images/ib.jpg" alt="image" >
 									        <div class="source-info media-body text-center text-md-left">
 										        <div class="source-name">Ogunmuyiwa Ibrahim</div>
-										        <div class="soure-title">Founder/C.E.O, Wetech Technology</div>
+										    
 										    </div>
 								        </div><!--//source-->
 								    </div><!--//carousel-item-->
@@ -161,12 +202,36 @@
 		    </div><!--//row-->
 	    </div><!--//container-->
     </section><!--//hero-section-->
-    
+
 	<section id="audience-section" class="audience-section">
 	    <div id="benefits-section" class="container">
+			<h2 class="section-heading text-center">Appeared on</h2>
+			<div class="section-intro text-center single-col-max mx-auto mb-5"></div>
+			<div class="row justify-content-center">
+				<div class="item col-12 col-lg-4 p-3 mb-4">
+					<div class="item-inner theme-bg-light rounded p-2">
+						<img class="appeared_on mr-md-3" src="assets/images/freecodecamp.png" alt="free code camp" ><a href="https://www.freecodecamp.org/news/author/codingnninja/" target="_blank"> (confirm)</a>
+					</div>	
+				</div><!--//item-->
+				<div class="item col-12 col-lg-4 p-3 mb-4">
+					<div class="item-inner theme-bg-light rounded p-2">
+						<img class="appeared_on mr-md-3" src="assets/images/smashing magazine.jpg" alt="smashing magazine" ><a href="https://www.smashingmagazine.com/author/ayobami-ogundiran/" target="_blank"> (confirm)</a>
+					</div>	
+				</div><!--//item-->
+				<div class="item col-12 col-lg-4 p-3 mb-4">
+					<div class="item-inner theme-bg-light rounded p-2">
+						<img class="appeared_on mr-md-3" src="assets/images/daily.jpg" alt="smashing magazine" ><a href="https://app.daily.dev/codingnninja" target="_blank"> (confirm)</a>
+					</div>	
+				</div><!--//item-->
+			</div><!--//row-->
+		</div><!--//container-->
+	</section><!--//reviews-section-->
+    <br>
+	<section id="audience-section" class="audience-section">
+	    <div class="container">
 		    <h2 class="section-heading text-center mb-4">Is this for me?</h2>
 		    <div class="section-intro single-col-max mx-auto text-center mb-5">
-				Yes, if you want a proven and sure way to understand and build projects with JavaScript to achieve your programming dreams <b>without struggling unnecessarily</b>. <br><br>It is for you if you want to learn web programming just to earn <b>a high-income in any currency</b>. <br><br><b style="color:red;">DON'T WORRY!</b> You are at <b>the right place</b> at the right time because I am about to teach you JavaScript to be <b>unstoppable</b>. <br><br> So, in six week's time, you will see clearly how your programming dreams are very close.<br><br>
+				Yes, if you want a proven and sure way to understand and build projects with JavaScript to achieve your programming dreams <b>without struggling unnecessarily</b>. <br><br>It is for you if you want to learn web programming just to earn <b>a high-income in any currency</b>. <br><br><b style="color:red;">DON'T WORRY!</b> You are at <b>the right place</b> at the right time because I am about to teach you JavaScript to be <b>unstoppable</b>. <br><br> Soon, you will see clearly how your programming dreams are very possible.<br><br>
 				<img class="img-fluid book-cover" src="assets/images/depressed.jpg"><br><br>
 				<b>Learning to code without a proper guideline and guidance is like driving a car without a steering</b> - it always ends in <b style="color:red;">TEARS</b>! <br><br>It can deny you all the opportunities you can gain through programming to make your life better, cater for your family and become a well respected person you have always dreamt of.<br><br>
 				See, after helping many beginners from <b>6 continents on earth & 54 countries of the world</b>, I have realized many of you fail to achieve your programming dreams because you don't have a sound <br><br> <b>learning mindset, fundamental knowledge of JavaScript, project making fundamental principles</b> and you don't have mentors who can help you whenever you are stuck. <br><br>
@@ -190,21 +255,103 @@
 				<br><br>
 				You need this course to have a mentor and a community of like minded people who will help you whenever you're stuck to avoid unnecessary struggle and stress.<br><br> I will teach you necessary soft skills to be great at JavaScript and show you how to make a living from it.
 				<br><br>
-				Above all, programming is very hard when you do it alone. Don't deny youself these opportunities. Look, if you are willing to give me a testimonial and you want to get this course right NOW, I have 89% discount for you.
-				<br><br>
-				Intead of paying $200 ( N101,500 ) later, you will pay $25 ( N10,300 ) if you pay NOW.
-				<br><br>
-				<div class="cta-holder">
-					<a class="btn btn-primary mr-lg-2" href="https://paystack.com/pay/specialofferjfatn" target="blank">I want to pay $25 ( N10,300 ) NOW</a>
-				</div><!--//cta-holder-->
-				<br>
-				<div class="text-center">
-					<a class="btn btn-success" href="https://wa.me/2349057073306" target="blank"><i class=""></i>Chat me on WhatsApp NOW</a>
-				</div>
+				Above all, programming is very hard when you do it alone. Don't deny youself these opportunities. Look, if you are willing to give me a testimonial and you want to get this course right NOW, I have 50% discount for you.
 				<br>
 		    </div><!--//section-intro-->
+			<div class="text-center">
+				<button class="btn btn-primary mr-lg-2" href=""> Act now!</button>
+			</div><br><!--//cta-holder-
 	    </div><!--//container-->
     </section><!--//audience-section-->
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+<section id="audience-section" class="benefits-section theme-bg-light-gradient pricing">
+	<div class="container">
+	  <div class="row">
+		<!-- Free Tier -->
+		<div class="col-lg-4">
+		  <div class="card mb-5 mb-lg-0">
+			<div class="card-body">
+			  <h5 class="card-title text-muted text-uppercase text-center">Basic</h5>
+			  <h6 class="card-price text-center">$25<span class="period">/$50</span></h6>
+			  <hr>
+			  <ul class="fa-ul">
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>HTML & CSS full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>JavaScript full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Projects' source code </li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>21+ articles</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>12 times bug fixes valid for 1 week</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>***********************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>***********************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>***********************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+			  </ul>
+			  <div class="d-grid">
+				<a href="https://flutterwave.com/pay/js-for-total-novice-basic" class="btn btn-primary text-uppercase">pay $25 now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Plus Tier -->
+		<div class="col-lg-4">
+		  <div class="card mb-5 mb-lg-0">
+			<div class="card-body">
+			  <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+			  <h6 class="card-price text-center">$49<span class="period">/$100</span></h6>
+			  <hr>
+			  <ul class="fa-ul">
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>HTML & CSS full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>JavaScript full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Projects' source code</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>21+ articles</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>50 times bug fixes valid for 9 weeks</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>5 times monetization sessions valid forever </li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+			  </ul>
+			  <div class="d-grid">
+				<a href="https://flutterwave.com/pay/js-for-total-novice-plus" class="btn btn-primary text-uppercase">pay $49 now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Pro Tier -->
+		<div class="col-lg-4">
+		  <div class="card">
+			<div class="card-body">
+			  <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+			  <h6 class="card-price text-center">$99<span class="period">/$200</span></h6>
+			  <hr>
+			  <ul class="fa-ul">
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>HTML & CSS full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>JavaScript full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Projects' source code</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>21+ articles</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> monetization sessions valid for 3 months</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> bug fixes valid for 3 months</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>CMD, Git & GitHub complete tutorials</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>The Rule of Six: How To Monetize Your Skills</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+			  </ul>
+			  <div class="d-grid">
+				<a href="https://flutterwave.com/pay/js-for-total-novice-pro" class="btn btn-primary text-uppercase">Pay $99 now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+		  <br><br>
+		<div class="text-center">
+			<a class="btn btn-success" href="https://wa.me/2349057073306" target="blank"><i class=""></i>Talk to me on WhatsApp NOW</a>
+		</div>
+		<div class="text-center">
+			<a class="btn btn-default" href="https://youtoocancode.com/jslists.html" target="blank"><i class=""></i>Not ready - Get started for free.</a>
+		</div><br>
+	</div>
+  </section><br><br>
 
 	<section id="audience-section" class="audience-section">
 	    <div id="difference" class="container">
@@ -384,20 +531,101 @@
 					    </div><!--//key-points-->
 				    </div><!--//col-12-->   
 			    </div><!--//row-->
+				<div class="text-center">
+					<button class="btn btn-primary mr-lg-2" href=""> Act now!</button>
+				</div><br><!--//cta-holder-
 		    </div><!--//single-col-max-->
-			<div class="text-center">
-				<a class="btn btn-primary mr-lg-2" href="https://paystack.com/pay/specialofferjfatn" target="blank"> I want to pay $25 ( N10,300 ) NOW</a>
-			</div><!--//cta-holder-->
-			<br>
-			<div class="text-center">
-				<a class="btn btn-success" href="https://wa.me/2349057073306" target="blank"><i class=""></i>Chat me on WhatsApp NOW</a>
-			</div>
-			<br>
-			<div class="text-center">
-				<a class="btn btn-default" href="https://youtoocancode.com/jslists.html" target="blank"><i class=""></i>Get Irresistible Gift</a>
-			</div><br>
 	    </div><!--//container-->
     </section><!--//content-section-->
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+<section id="audience-section" class="benefits-section theme-bg-light-gradient pricing">
+	<div class="container">
+	  <div class="row">
+		<!-- Free Tier -->
+		<div class="col-lg-4">
+		  <div class="card mb-5 mb-lg-0">
+			<div class="card-body">
+			  <h5 class="card-title text-muted text-uppercase text-center">Basic</h5>
+			  <h6 class="card-price text-center">$25<span class="period">/$50</span></h6>
+			  <hr>
+			  <ul class="fa-ul">
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>HTML & CSS full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>JavaScript full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Projects' source code </li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>21+ articles</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>12 times bug fixes valid for 1 week</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>***********************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>***********************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>***********************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+			  </ul>
+			  <div class="d-grid">
+				<a href="https://flutterwave.com/pay/js-for-total-novice-basic" class="btn btn-primary text-uppercase">pay $25 now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Plus Tier -->
+		<div class="col-lg-4">
+		  <div class="card mb-5 mb-lg-0">
+			<div class="card-body">
+			  <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+			  <h6 class="card-price text-center">$49<span class="period">/$100</span></h6>
+			  <hr>
+			  <ul class="fa-ul">
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>HTML & CSS full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>JavaScript full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Projects' source code</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>21+ articles</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>50 times bug fixes valid for 9 weeks</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>5 times monetization sessions valid forever </li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+			  </ul>
+			  <div class="d-grid">
+				<a href="https://flutterwave.com/pay/js-for-total-novice-plus" class="btn btn-primary text-uppercase">pay $49 now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Pro Tier -->
+		<div class="col-lg-4">
+		  <div class="card">
+			<div class="card-body">
+			  <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+			  <h6 class="card-price text-center">$99<span class="period">/$200</span></h6>
+			  <hr>
+			  <ul class="fa-ul">
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>HTML & CSS full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>JavaScript full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Projects' source code</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>21+ articles</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> monetization sessions valid for 3 months</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> bug fixes valid for 3 months</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>CMD, Git & GitHub complete tutorials</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>The Rule of Six: How To Monetize Your Skills</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+			  </ul>
+			  <div class="d-grid">
+				<a href="https://flutterwave.com/pay/js-for-total-novice-pro" class="btn btn-primary text-uppercase">Pay $99 now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+		  <br><br>
+		<div class="text-center">
+			<a class="btn btn-success" href="https://wa.me/2349057073306" target="blank"><i class=""></i>Talk to me on WhatsApp NOW</a>
+		</div>
+		<div class="text-center">
+			<a class="btn btn-default" href="https://youtoocancode.com/jslists.html" target="blank"><i class=""></i>Not ready - Get started for free.</a>
+		</div><br>
+	</div>
+  </section><br><br>
 
 <section id="audience-section" class="audience-section">
 	<div class="container" id="why-do-I-need">
@@ -473,7 +701,6 @@
 						<img class="source-profile mr-md-3" src="assets/images/wahab.jpg" alt="image" >
 						<div class="source-info media-body text-center text-md-left">
 							<div class="source-name">Abdul-Wahab Adekola</div>
-							<div class="soure-title">Founder, www.MailHouse.com.ng</div>
 						</div>
 					</div><!--//source-->
 					<div class="icon-holder"><i class="fas fa-quote-right"></i></div>
@@ -489,7 +716,6 @@
 						<img class="source-profile mr-md-3" src="assets/images/abdul.jpg" alt="image" >
 						<div class="source-info media-body text-center text-md-left">
 							<div class="source-name">Abdullahi Oladejo</div>
-							<div class="soure-title">Software Development Teacher</div>
 						</div>
 					</div><!--//source-->
 					 <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
@@ -505,11 +731,35 @@
 						<img class="source-profile mr-md-3" src="assets/images/ib.jpg" alt="image" >
 						<div class="source-info media-body text-center text-md-left">
 							<div class="source-name">Ogunmuyiwa Ibrahim</div>
-							<div class="soure-title">Founder/C.E.O, Wetech Technology</div>
 						</div>
 					</div><!--//source-->
 					 <div class="icon-holder"><i class="fas fa-quote-right"></i></div>
 				</div><!--//inner-->
+			</div><!--//item-->
+			<div class="item col-12 col-lg-4 p-3 mb-4">
+				<div class="item-inner theme-bg-light rounded p-4">
+					<img class="appeared_on mr-md-3" src="assets/images/say1.png" alt="" >
+				</div>	
+			</div><!--//item-->
+			<div class="item col-12 col-lg-4 p-3 mb-4">
+				<div class="item-inner theme-bg-light rounded p-4">
+					<img class="appeared_on mr-md-3" src="assets/images/say2.png" alt="" >
+				</div>	
+			</div><!--//item-->
+			<div class="item col-12 col-lg-4 p-3 mb-4">
+				<div class="item-inner theme-bg-light rounded p-4">
+					<img class="appeared_on mr-md-3" src="assets/images/say3.png" alt="" >
+				</div>	
+			</div><!--//item-->
+			<div class="item col-12 col-lg-4 p-3 mb-4">
+				<div class="item-inner theme-bg-light rounded p-4">
+					<img class="appeared_on mr-md-3" src="assets/images/say4.png" alt="" >
+				</div>	
+			</div><!--//item-->
+			<div class="item col-12 col-lg-4 p-3 mb-4">
+				<div class="item-inner theme-bg-light rounded p-4">
+					<img class="appeared_on mr-md-3" src="assets/images/say5.png" alt="" >
+				</div>	
 			</div><!--//item-->
 		</div><!--//row-->
 	</div><!--//container-->
@@ -520,7 +770,7 @@
 		<div class="section-intro single-col-max mx-auto text-center mb-5">
 			If you're willing to share your opinion with me as a testimony and buy this course <b style="color:red;">RIGHT NOW</b>, you will: <br><br>
 			<ul class="key-points-list list-unstyled mb-4 mx-auto d-inline-block text-left">
-				<li><i class="fas fa-check-circle mr-2"></i> <b style="color:red;">Pay $25 ( N10,300 ) </b> instead of <b style="color:blue;">$200 ( N101,000 )</b>. <br>That is a huge <b style="color:red;">89% discount</b>.</li>
+				<li><i class="fas fa-check-circle mr-2"></i> <b style="color:red;">Get a huge 50% discount </b></li>
 				<li><i class="fas fa-check-circle mr-2"></i> Get Limited Mentoring (guaranteed) </li>
 				<li><i class="fas fa-check-circle mr-2"></i> Get Active Community Supports </li>
 				<li><i class="fas fa-check-circle mr-2"></i> And your struggles will be taken care of.  </li>
@@ -529,23 +779,107 @@
 		</div><!--//section-intro-->
 	</div><!--//container-->
 	<div class="text-center">
-		<a class="btn btn-primary mr-lg-2" href="https://paystack.com/pay/specialofferjfatn" target="blank"> I want to pay $25 ( N10,300 ) NOW</a>
-	</div><br><!--//cta-holder-->
+		<button class="btn btn-primary mr-lg-2" href=""> Act now!</button>
+	</div><br><!--//cta-holder-
 </section><!--//audience-section-->
+<!-- This snippet uses Font Awesome 5 Free as a dependency. You can download it at fontawesome.io! -->
+<section id="audience-section" class="benefits-section theme-bg-light-gradient pricing">
+	<div class="container">
+	  <div class="row">
+		<!-- Free Tier -->
+		<div class="col-lg-4">
+		  <div class="card mb-5 mb-lg-0">
+			<div class="card-body">
+			  <h5 class="card-title text-muted text-uppercase text-center">Basic</h5>
+			  <h6 class="card-price text-center">$25<span class="period">/$50</span></h6>
+			  <hr>
+			  <ul class="fa-ul">
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>HTML & CSS full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>JavaScript full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Projects' source code </li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>21+ articles</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>12 times bug fixes valid for 1 week</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>***********************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>***********************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>***********************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+			  </ul>
+			  <div class="d-grid">
+				<a href="https://flutterwave.com/pay/js-for-total-novice-basic" class="btn btn-primary text-uppercase">pay $25 now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Plus Tier -->
+		<div class="col-lg-4">
+		  <div class="card mb-5 mb-lg-0">
+			<div class="card-body">
+			  <h5 class="card-title text-muted text-uppercase text-center">Plus</h5>
+			  <h6 class="card-price text-center">$49<span class="period">/$100</span></h6>
+			  <hr>
+			  <ul class="fa-ul">
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>HTML & CSS full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>JavaScript full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Projects' source code</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>21+ articles</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>50 times bug fixes valid for 9 weeks</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>5 times monetization sessions valid forever </li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+			  </ul>
+			  <div class="d-grid">
+				<a href="https://flutterwave.com/pay/js-for-total-novice-plus" class="btn btn-primary text-uppercase">pay $49 now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+		<!-- Pro Tier -->
+		<div class="col-lg-4">
+		  <div class="card">
+			<div class="card-body">
+			  <h5 class="card-title text-muted text-uppercase text-center">Pro</h5>
+			  <h6 class="card-price text-center">$99<span class="period">/$200</span></h6>
+			  <hr>
+			  <ul class="fa-ul">
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>HTML & CSS full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>JavaScript full course</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Projects' source code</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>Community Access</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>21+ articles</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> monetization sessions valid for 3 months</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span><strong>Unlimited</strong> bug fixes valid for 3 months</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>CMD, Git & GitHub complete tutorials</li>
+				<li><span class="fa-li"><i class="fas fa-check"></i></span>The Rule of Six: How To Monetize Your Skills</li>
+				<li class="text-muted"><span class="fa-li"><i class="fas fa-times"></i></span>*************************</li>
+			  </ul>
+			  <div class="d-grid">
+				<a href="https://flutterwave.com/pay/js-for-total-novice-pro" class="btn btn-primary text-uppercase">Pay $99 now</a>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+		  <br><br>
+		<div class="text-center">
+			<a class="btn btn-success" href="https://wa.me/2349057073306" target="blank"><i class=""></i>Talk to me on WhatsApp NOW</a>
+		</div>
+		<div class="text-center">
+			<a class="btn btn-default" href="https://youtoocancode.com/jslists.html" target="blank"><i class=""></i>Not ready - Get started for free.</a>
+		</div><br>
+	</div>
+  </section><br><br>
 <section id="form-section" class="form-section">
 	<div class="container">
 		<div class="lead-form-wrapper single-col-max mx-auto theme-bg-light rounded p-5">
 			<h2 class="form-heading text-center">Alternative Payment Method</h2>
-			<div class="form-intro text-center mb-3"> If you couldn't pay with the button above, you can simply pay by:
+			<div class="form-intro text-center mb-3"> If you couldn't pay with the button above, you can simply
 			<br><br>
-			<h5>Making payment to this account:</h5>
-			<br> Account Name: <b>Ogundiran Ayobami A.</b>
-			<br> Account Number: <b>0108010849</b>
-			<br> Bank Name: <b>GTbank</b>
-			<br><br>
-			<b>Then, <div class="text-center">
-				<a class="btn btn-success" href="https://wa.me/2349057073306" target="blank">click to</a>
-			</div> forward your payment details to me on WhatsApp <img class="img-fluid book-cover" style="width: 30px;" src="assets/images/wa.png"> . </b>
+			<b><div class="text-center">
+				<a class="btn btn-success" href="https://wa.me/2349057073306" target="blank">Click here </a>
+			</div> to get it via WhatsApp<img class="img-fluid book-cover" style="width: 30px;" src="assets/images/wa.png"> . </b>
 			</div>
 		</div><!--//lead-form-wrapper-->
 	</div><!--//container-->
@@ -600,6 +934,7 @@
 		<a class="btn btn-default" href="tel:+2349057073306" target="blank">Call me now</a>
 	</div> -->
 </section><!--//form-section-->
+
  <br>
 <section id="author-section" class="author-section section theme-bg-primary py-5">
 	<div class="container py-3">
