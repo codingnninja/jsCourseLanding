@@ -15,16 +15,6 @@
     <link href="https://fonts.googleapis.com/css?family=Quicksand:700|Roboto:400,400i,700&display=swap" rel="stylesheet">
 	<style>
 
-.discount-pop {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100px;
-	background-color: #fb866a;
-	color: #fff;
-}
-
 .pricing .card {
   border: none;
   border-radius: 1rem;
@@ -81,6 +71,8 @@
     <script defer src="assets/fontawesome/js/all.min.js"></script>
 
     <!-- Theme CSS -->  
+	<link rel="stylesheet" href="assets/fwm/floating-wpp.min.css">
+
     <link id="theme-style" rel="stylesheet" href="assets/css/theme.css">
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jotted@latest/jotted.min.css">
 	<link href="https://myCDN.com/prism@v1.x/themes/prism.css" rel="stylesheet" />
@@ -921,10 +913,6 @@
 		<a class="btn btn-default" href="tel:+2349057073306" target="blank">Call me now</a>
 	</div> -->
 </section><!--//form-section-->
-
- <br>
- <div class="discount-pop"> Get at 90% discount </div>
-
 <section id="author-section" class="author-section section theme-bg-primary py-5">
 	<div class="container py-3">
 		<div class="author-profile text-center mb-5">
@@ -954,6 +942,7 @@
 	<div>
 	    <div id="editor" class="language-html"></div>
 	</div>
+	<div id="myDiv" style="z-index: 100;"></div>
 </footer>
 	
     <!-- Javascript -->  
@@ -975,6 +964,17 @@
     <script src="assets/js/main.js"></script>
 	<script src="https://myCDN.com/prism@v1.x/components/prism-core.min.js"></script>
 	<script src="https://myCDN.com/prism@v1.x/plugins/autoloader/prism-autoloader.min.js"></script>
+	<script type="text/javascript" src="assets/fwm/floating-wpp.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+          $('#myDiv').floatingWhatsApp({
+            phone: '2349040269838',
+            popupMessage: 'Hello, how can we help you?',
+            showPopup: true,
+            headerTitle: 'Welcome!'
+          });
+        });
+      </script>
 </body>
 </html> 
 
