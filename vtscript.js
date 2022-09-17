@@ -498,8 +498,8 @@ const next = (index) => {
     currentQuestionIndex = index;
     if(currentQuestionIndex === Questions.length){
         return `
-        <span style="color:#fff;">The next stage is comming soon. Drop you email to get notified when it is available.</span><br>
-        <a href="https://youtoocancode.aweb.pag" target="blank_"> Drop your email</a>
+        <span style="color:#fff;">The next stage is coming soon. Drop you email to get notified when it is available.</span><br>
+        <a href="https://youtoocancode.aweb.page" target="blank_"> Click to drop your email</a>
         `
     }
     return `<button onclick="display(${index})"> Next </button>
