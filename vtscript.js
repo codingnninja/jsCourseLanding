@@ -498,7 +498,8 @@ const next = (index) => {
     currentQuestionIndex = index;
     if(currentQuestionIndex === Questions.length){
         return `
-        <a href="https://youtoocancode.com/html-css"> Learn HTML & CSS</a>
+        <span style="color:#fff;">The next stage is comming soon. Drop you email to get notified when it is available.</span><br>
+        <a href="https://youtoocancode.aweb.pag" target="blank_"> Drop your email</a>
         `
     }
     return `<button onclick="display(${index})"> Next </button>
@@ -507,7 +508,8 @@ const next = (index) => {
 
 const watchTutorial = (index) => {
     const correctionCordinate = {
-        x:''
+        x: 4,
+        y: 5
     }
     
     makeCorrection(Questions[currentQuestionIndex]);
@@ -525,7 +527,7 @@ const resolveElement = (obj) => {
     } else if (obj.target) {
         return obj.target;
     }
-    throw("element and events are expected");
+    throw("element or event is expected");
 }
 
 const hide = (element) => {
@@ -549,17 +551,4 @@ const showGame = () => {
 }
 showGame();
 
-/* let questionId = 0;
-const options = document.querySelectorAll('.option');
-const option = options[questionId];
-
-option.addEventListener('click',(event) => {
-    const selector = `input[name=question${questionId}]:checked`;
-    const answer = (option.querySelector(selector) || {}).value;
-    console.log(event.target.value)
-})
-
-const answerContent = option.querySelector(`#${userAnswer}`);
-
- */
 
